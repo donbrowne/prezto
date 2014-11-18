@@ -9,6 +9,11 @@
 # Browser
 #
 
+# Source site-specific configuration
+if [[ -s "~/.zprofile.local" ]]; then
+  source "~/.zprofile.local"
+fi
+
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER='open'
 fi
@@ -47,9 +52,6 @@ path=(
   $path
 )
 
-chpwd() {
-    ls;
-}
 #
 # Less
 #
